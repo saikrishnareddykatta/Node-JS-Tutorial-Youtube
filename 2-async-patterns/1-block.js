@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
     res.end();
     return;
   } else if (req.url === "/about") {
-    // Writimg Blocking Code. A blocking code could be a nested for loop
+    // Writing Blocking Code. A blocking code could be a nested for loop
     for (let i = 0; i < 1000; i++) {
       for (let j = 0; j < 1000; j++) {
         console.log(`${i} ${j}`);
