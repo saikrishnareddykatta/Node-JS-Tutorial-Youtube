@@ -6,6 +6,9 @@ const app = express();
 
 const connectDB = require("./db/connect");
 
+// Products Router
+const productsRouter = require("./routes/products");
+
 // Middleware Import
 
 const notFoundMiddleware = require("./middleware/not-found");
@@ -24,6 +27,7 @@ app.get("/", (req, res) => {
 });
 
 // Products Route
+app.use("/api/v1/products", productsRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorMiddleware);
